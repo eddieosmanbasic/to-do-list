@@ -13,18 +13,14 @@ $("input[type='text']").keypress(function(event) {
 	if(event.which === 13) {
 		var newEntry = $(this).val();
 		$(this).val("");
-		$("ul").append("<li><span>X </span>" + newEntry + "</li>")
+		$("ul").append("<li><span><i class='fa fa-trash'> </i></span>" + newEntry + "</li>")
 	}
 
 })
 
+$(".fa-plus").on('click', function() {
+	$("input[type='text']").fadeToggle();
+})
 
 
-// $("li").on('mouseenter', function() {
-// 	$(".deleteButton").css("display", "inline")
-// })
-
-// $("li").on('mouseout', function() {
-// 	$(".deleteButton").css("display", "none")
-// })
 
